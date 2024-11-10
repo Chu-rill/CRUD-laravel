@@ -14,13 +14,14 @@
         <div class="col-md-6 col-lg-4">
             <h1 class="text-center mb-4">Login</h1>
             <form action="/login" method="POST">
+                @csrf
                 <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                    <label for="email">Username</label>
+                    <input type="text" name="loginname" class="form-control" id="name" placeholder="Enter Username" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                    <input type="password"name="loginpassword" class="form-control" id="password" placeholder="Password" required>
                 </div>
                 <div class="form-check mb-3">
                     <input type="checkbox" class="form-check-input" id="rememberMe">
