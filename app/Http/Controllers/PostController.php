@@ -21,4 +21,8 @@ class PostController extends Controller
 
         return redirect('/home');
     }
+    public function showEdit(Post $post)
+    {
+        return view('editNote', ['post' => $post]);
+    }
 }

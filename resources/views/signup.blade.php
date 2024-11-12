@@ -9,8 +9,8 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="container d-flex align-items-center justify-content-center min-vh-100">
+<body class="bg-dark text-light">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100 bg-dark text-light">
         <div class="col-md-6 col-lg-4">
             <h1 class="text-center mb-4">Sign Up</h1>
             <form action="/register" method="POST">

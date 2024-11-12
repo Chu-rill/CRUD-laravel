@@ -9,7 +9,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-dark text-light">
     <div class="container d-flex align-items-center justify-content-center min-vh-100 ">
         <div class="col-md-6 col-lg-4">
             <h1 class="text-center mb-4">Login</h1>

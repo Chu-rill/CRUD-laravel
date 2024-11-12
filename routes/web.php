@@ -14,8 +14,15 @@ Route::get('/signup', function () {
 Route::get('/addNote', function () {
     return view('addNote');
 })->name('addNote');
+Route::get('/editNote', function () {
+    return view('editNote');
+})->name('editNote');
 Route::get('/home', function () {
-    $posts = Post::all();
+    $posts = [];
+    if (auth()->check()) {
+        $posts = auth()->user()->usersPost()->latest()->get();
+    }
+    // $posts = Post::where('user_id', auth()->id())->get();
     return view('home', ['posts' => $posts]);
 });
 
@@ -27,3 +34,4 @@ Route::post('/login', [UserController::class, 'login']);
 //post routes
 
 Route::post('/create-post', [PostController::class, 'createPost']);
+Route::get('/edit-post/{post}', [PostController::class, 'showEdit'])->name('editPost');
